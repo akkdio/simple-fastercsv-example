@@ -1,0 +1,23 @@
+<p>
+  <b>Deal name:</b>
+  <%=h @deal.deal_name %>
+</p>
+
+<p>
+  <b>Purchase price:</b>
+  <%=h @deal.purchase_price %>
+</p>
+
+<p>
+  <b>Current price:</b>
+  <%=h @deal.current_price %>
+</p>
+
+<p>
+  <b>In the hole:</b>
+  <%=h @deal.in_the_hole %>
+</p>
+
+
+<%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Back', deals_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  deal_name: MyString
+  purchase_price: 9.99
+  current_price: 9.99
+  in_the_hole: 9.99
+
+two:
+  deal_name: MyString
+  purchase_price: 9.99
+  current_price: 9.99
+  in_the_hole: 9.99

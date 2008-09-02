@@ -1,0 +1,32 @@
+<h1>Editing deal</h1>
+
+<%= error_messages_for :deal %>
+
+<% form_for(@deal) do |f| %>
+  <p>
+    <b>Deal name</b><br />
+    <%= f.text_field :deal_name %>
+  </p>
+
+  <p>
+    <b>Purchase price</b><br />
+    <%= f.text_field :purchase_price %>
+  </p>
+
+  <p>
+    <b>Current price</b><br />
+    <%= f.text_field :current_price %>
+  </p>
+
+  <p>
+    <b>In the hole</b><br />
+    <%= f.text_field :in_the_hole %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @deal %> |
+<%= link_to 'Back', deals_path %>

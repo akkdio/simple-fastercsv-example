@@ -1,0 +1,26 @@
+<h1>Listing deals</h1>
+
+<table>
+  <tr>
+    <th>Deal name</th>
+    <th>Purchase price</th>
+    <th>Current price</th>
+    <th>In the hole</th>
+  </tr>
+
+<% for deal in @deals %>
+  <tr>
+    <td><%=h deal.deal_name %></td>
+    <td><%=h number_to_currency(deal.purchase_price) %></td>
+    <td><%=h number_to_currency(deal.current_price) %></td>
+    <td><%=h number_to_currency(deal.in_the_hole) %></td>
+    <td><%= link_to 'Show', deal %></td>
+    <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+    <td><%= link_to 'Destroy', deal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New deal', new_deal_path %>
