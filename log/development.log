@@ -949,3 +949,352 @@ Rendering template within layouts/deals
 Rendering deals/index
   [4;35;1mDeal Columns (0.002678)[0m   [0mSHOW FIELDS FROM `deals`[0m
 Completed in 0.01546 (64 reqs/sec) | Rendering: 0.00728 (47%) | DB: 0.00300 (19%) | 200 OK [http://localhost/deals]
+  [4;36;1mSQL (0.136428)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.007777)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DealsController#index (for 127.0.0.1 at 2008-09-07 22:29:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"deals"}
+  [4;36;1mDeal Load (0.591316)[0m   [0;1mSELECT * FROM `deals` [0m
+Rendering template within layouts/deals
+Rendering deals/index
+  [4;35;1mDeal Columns (0.280734)[0m   [0mSHOW FIELDS FROM `deals`[0m
+Completed in 1.34918 (0 reqs/sec) | Rendering: 0.15364 (11%) | DB: 1.01625 (75%) | 200 OK [http://localhost/deals]
+  [4;36;1mSQL (0.000336)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000160)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.011920)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000432)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDeals (1)
+  [4;35;1mSQL (0.227341)[0m   [0mDROP TABLE `deals`[0m
+  [4;36;1mSQL (0.010766)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000274)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000549)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDeals (1)
+  [4;35;1mSQL (0.083256)[0m   [0mCREATE TABLE `deals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `deal_name` varchar(255) DEFAULT NULL, `purchase_price` decimal DEFAULT NULL, `current_price` decimal DEFAULT NULL, `in_the_hole` decimal DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000624)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000304)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000409)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002699)[0m   [0mSHOW FIELDS FROM `deals`[0m
+  [4;36;1mSQL (0.001763)[0m   [0;1mdescribe `deals`[0m
+  [4;35;1mSQL (0.000384)[0m   [0mSHOW KEYS FROM `deals`[0m
+
+
+Processing ImportDealController#index (for 127.0.0.1 at 2008-09-07 22:32:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"import_deal"}
+Rendering import_deal/index
+Completed in 0.00610 (163 reqs/sec) | Rendering: 0.00226 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/import_deal]
+
+
+Processing ImportDealController#csv_import (for 127.0.0.1 at 2008-09-07 22:32:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"csv_import"=>{"file"=>#<ActionController::UploadedStringIO:0x193d770>}, "commit"=>"Submit", "authenticity_token"=>"54aeb4558ba3d9a7afc79488def809a4dbeb6d6b", "action"=>"csv_import", "controller"=>"import_deal"}
+  [4;36;1mSQL (0.000244)[0m   [0;1mBEGIN[0m
+  [4;35;1mDeal Columns (0.002942)[0m   [0mSHOW FIELDS FROM `deals`[0m
+  [4;36;1mDeal Create (0.033990)[0m   [0;1mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Could not pass up', -500000, '2008-09-07 22:32:34', 500000, 1000000, '2008-09-07 22:32:34')[0m
+  [4;35;1mDeal Create (0.000290)[0m   [0mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Mom\'s Retirement', -400000, '2008-09-07 22:32:34', 100000, 500000, '2008-09-07 22:32:34')[0m
+  [4;36;1mDeal Create (0.000269)[0m   [0;1mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Last straw', -175000, '2008-09-07 22:32:34', 75000, 250000, '2008-09-07 22:32:34')[0m
+  [4;35;1mDeal Create (0.000283)[0m   [0mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('McDonald\'s Revenge', -1, '2008-09-07 22:32:34', 0, 1, '2008-09-07 22:32:34')[0m
+  [4;36;1mSQL (0.000786)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/import_deal
+Completed in 0.09815 (10 reqs/sec) | DB: 0.03880 (39%) | 302 Found [http://localhost/import_deal/csv_import]
+
+
+Processing ImportDealController#index (for 127.0.0.1 at 2008-09-07 22:32:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiJTdWNjZXNzZnVsbHkgYWRkZWQgNCBEZWFsKHMpLgY6%0ACkB1c2VkewY7B1Q%3D--78e080a596fa14058458a4e975df6c7b7b8bf6af
+  Parameters: {"action"=>"index", "controller"=>"import_deal"}
+Rendering import_deal/index
+Completed in 0.00358 (279 reqs/sec) | Rendering: 0.00140 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/import_deal]
+
+
+Processing DealsController#index (for 127.0.0.1 at 2008-09-07 22:32:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"deals"}
+  [4;35;1mDeal Load (0.000431)[0m   [0mSELECT * FROM `deals` [0m
+Rendering template within layouts/deals
+Rendering deals/index
+  [4;36;1mDeal Columns (0.003355)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+Completed in 0.06807 (14 reqs/sec) | Rendering: 0.02611 (38%) | DB: 0.00379 (5%) | 200 OK [http://localhost/deals]
+
+
+Processing DealsController#new (for 127.0.0.1 at 2008-09-07 22:33:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"new", "controller"=>"deals"}
+  [4;35;1mDeal Columns (0.003175)[0m   [0mSHOW FIELDS FROM `deals`[0m
+Rendering template within layouts/deals
+Rendering deals/new
+Completed in 0.01572 (63 reqs/sec) | Rendering: 0.00556 (35%) | DB: 0.00317 (20%) | 200 OK [http://localhost/deals/new]
+
+
+Processing DealsController#create (for 127.0.0.1 at 2008-09-07 22:34:08) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"commit"=>"Create", "deal"=>{"deal_name"=>"ANother", "in_the_hole"=>"-10.99", "current_price"=>"12000", "purchase_price"=>"10000"}, "authenticity_token"=>"54aeb4558ba3d9a7afc79488def809a4dbeb6d6b", "action"=>"create", "controller"=>"deals"}
+  [4;36;1mDeal Columns (0.002735)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+  [4;35;1mSQL (0.000148)[0m   [0mBEGIN[0m
+  [4;36;1mDeal Create (0.000313)[0m   [0;1mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('ANother', -10, '2008-09-07 22:34:08', 12000, 10000, '2008-09-07 22:34:08')[0m
+  [4;35;1mSQL (0.000581)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/deals/5
+Completed in 0.01467 (68 reqs/sec) | DB: 0.00378 (25%) | 302 Found [http://localhost/deals]
+
+
+Processing DealsController#show (for 127.0.0.1 at 2008-09-07 22:34:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNEZWFsIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G%0AOgpAdXNlZHsGOwdU--5ee84e9884e38117d9adb465590cfdd7ebaacf07
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"deals"}
+  [4;36;1mDeal Columns (0.002184)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+  [4;35;1mDeal Load (0.063807)[0m   [0mSELECT * FROM `deals` WHERE (`deals`.`id` = 5) [0m
+Rendering template within layouts/deals
+Rendering deals/show
+Completed in 0.09165 (10 reqs/sec) | Rendering: 0.01850 (20%) | DB: 0.06599 (72%) | 200 OK [http://localhost/deals/5]
+
+
+Processing DealsController#index (for 127.0.0.1 at 2008-09-07 22:34:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"deals"}
+  [4;36;1mDeal Load (0.088090)[0m   [0;1mSELECT * FROM `deals` [0m
+Rendering template within layouts/deals
+Rendering deals/index
+  [4;35;1mDeal Columns (0.002738)[0m   [0mSHOW FIELDS FROM `deals`[0m
+Completed in 0.16890 (5 reqs/sec) | Rendering: 0.06188 (36%) | DB: 0.09083 (53%) | 200 OK [http://localhost/deals]
+
+
+Processing DealsController#new (for 127.0.0.1 at 2008-09-07 22:37:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"new", "controller"=>"deals"}
+  [4;36;1mDeal Columns (0.002312)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+Rendering template within layouts/deals
+Rendering deals/new
+Completed in 0.01465 (68 reqs/sec) | Rendering: 0.00539 (36%) | DB: 0.00231 (15%) | 200 OK [http://localhost/deals/new]
+
+
+Processing DealsController#index (for 127.0.0.1 at 2008-09-07 22:37:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"deals"}
+  [4;35;1mDeal Load (0.000313)[0m   [0mSELECT * FROM `deals` [0m
+Rendering template within layouts/deals
+Rendering deals/index
+  [4;36;1mDeal Columns (0.002871)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+Completed in 0.01576 (63 reqs/sec) | Rendering: 0.00673 (42%) | DB: 0.00318 (20%) | 200 OK [http://localhost/deals]
+
+
+Processing DealsController#destroy (for 127.0.0.1 at 2008-09-07 22:37:16) [DELETE]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"authenticity_token"=>"54aeb4558ba3d9a7afc79488def809a4dbeb6d6b", "_method"=>"delete", "action"=>"destroy", "id"=>"2", "controller"=>"deals"}
+  [4;35;1mDeal Columns (0.002780)[0m   [0mSHOW FIELDS FROM `deals`[0m
+  [4;36;1mDeal Load (0.001482)[0m   [0;1mSELECT * FROM `deals` WHERE (`deals`.`id` = 2) [0m
+  [4;35;1mSQL (0.000123)[0m   [0mBEGIN[0m
+  [4;36;1mDeal Destroy (0.000399)[0m   [0;1m DELETE FROM `deals`
+ WHERE `id` = 2
+[0m
+  [4;35;1mSQL (0.000865)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/deals
+Completed in 0.01548 (64 reqs/sec) | DB: 0.00565 (36%) | 302 Found [http://localhost/deals/2]
+
+
+Processing DealsController#index (for 127.0.0.1 at 2008-09-07 22:37:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"deals"}
+  [4;36;1mDeal Load (0.000305)[0m   [0;1mSELECT * FROM `deals` [0m
+Rendering template within layouts/deals
+Rendering deals/index
+  [4;35;1mDeal Columns (0.001942)[0m   [0mSHOW FIELDS FROM `deals`[0m
+Completed in 0.05344 (18 reqs/sec) | Rendering: 0.00454 (8%) | DB: 0.00225 (4%) | 200 OK [http://localhost/deals]
+  [4;36;1mSQL (0.000304)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000155)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000234)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDeals (1)
+  [4;35;1mSQL (0.021053)[0m   [0mDROP TABLE `deals`[0m
+  [4;36;1mSQL (0.000374)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000246)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000394)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000308)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDeals (1)
+  [4;35;1mSQL (0.103597)[0m   [0mCREATE TABLE `deals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `deal_name` varchar(255) DEFAULT NULL, `purchase_price` decimal(8,2) DEFAULT NULL, `current_price` decimal(8,0) DEFAULT NULL, `in_the_hole` decimal(8,2) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000588)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000246)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000389)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002594)[0m   [0mSHOW FIELDS FROM `deals`[0m
+  [4;36;1mSQL (0.001771)[0m   [0;1mdescribe `deals`[0m
+  [4;35;1mSQL (0.000346)[0m   [0mSHOW KEYS FROM `deals`[0m
+
+
+Processing ImportDealController#index (for 127.0.0.1 at 2008-09-07 23:55:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"import_deal"}
+Rendering import_deal/index
+Completed in 0.00554 (180 reqs/sec) | Rendering: 0.00209 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/import_deal]
+
+
+Processing ImportDealController#csv_import (for 127.0.0.1 at 2008-09-07 23:55:32) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"csv_import"=>{"file"=>#<ActionController::UploadedStringIO:0x1781f6c>}, "commit"=>"Submit", "authenticity_token"=>"54aeb4558ba3d9a7afc79488def809a4dbeb6d6b", "action"=>"csv_import", "controller"=>"import_deal"}
+  [4;36;1mSQL (0.000166)[0m   [0;1mBEGIN[0m
+  [4;35;1mDeal Columns (0.002122)[0m   [0mSHOW FIELDS FROM `deals`[0m
+  [4;36;1mDeal Create (0.017126)[0m   [0;1mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Could not pass up', '-500000.0', '2008-09-07 23:55:32', 500000, '1000000.0', '2008-09-07 23:55:32')[0m
+  [4;35;1mDeal Create (0.000300)[0m   [0mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Mom\'s Retirement', '-400000.0', '2008-09-07 23:55:32', 100000, '500000.0', '2008-09-07 23:55:32')[0m
+  [4;36;1mDeal Create (0.000204)[0m   [0;1mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Last straw', '-175000.0', '2008-09-07 23:55:32', 75000, '250000.0', '2008-09-07 23:55:32')[0m
+  [4;35;1mDeal Create (0.000157)[0m   [0mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('McDonald\'s Revenge', '-1.0', '2008-09-07 23:55:32', 0, '1.99', '2008-09-07 23:55:32')[0m
+  [4;36;1mSQL (0.000727)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/import_deal
+Completed in 0.06853 (14 reqs/sec) | DB: 0.02080 (30%) | 302 Found [http://localhost/import_deal/csv_import]
+
+
+Processing ImportDealController#index (for 127.0.0.1 at 2008-09-07 23:55:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiJTdWNjZXNzZnVsbHkgYWRkZWQgNCBEZWFsKHMpLgY6%0ACkB1c2VkewY7B1Q%3D--78e080a596fa14058458a4e975df6c7b7b8bf6af
+  Parameters: {"action"=>"index", "controller"=>"import_deal"}
+Rendering import_deal/index
+Completed in 0.00361 (276 reqs/sec) | Rendering: 0.00134 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/import_deal]
+
+
+Processing DealsController#index (for 127.0.0.1 at 2008-09-07 23:55:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"deals"}
+  [4;35;1mDeal Load (0.000304)[0m   [0mSELECT * FROM `deals` [0m
+Rendering template within layouts/deals
+Rendering deals/index
+  [4;36;1mDeal Columns (0.001641)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+Completed in 0.01473 (67 reqs/sec) | Rendering: 0.00446 (30%) | DB: 0.00195 (13%) | 200 OK [http://localhost/deals]
+
+
+Processing DealsController#new (for 127.0.0.1 at 2008-09-07 23:55:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"new", "controller"=>"deals"}
+  [4;35;1mDeal Columns (0.003135)[0m   [0mSHOW FIELDS FROM `deals`[0m
+Rendering template within layouts/deals
+Rendering deals/new
+Completed in 0.01452 (68 reqs/sec) | Rendering: 0.00490 (33%) | DB: 0.00313 (21%) | 200 OK [http://localhost/deals/new]
+
+
+Processing DealsController#create (for 127.0.0.1 at 2008-09-07 23:56:03) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"commit"=>"Create", "deal"=>{"deal_name"=>"decimal", "in_the_hole"=>"1.899999", "current_price"=>"5.40", "purchase_price"=>"10.50"}, "authenticity_token"=>"54aeb4558ba3d9a7afc79488def809a4dbeb6d6b", "action"=>"create", "controller"=>"deals"}
+  [4;36;1mDeal Columns (0.002736)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+  [4;35;1mSQL (0.000205)[0m   [0mBEGIN[0m
+  [4;36;1mDeal Create (0.000328)[0m   [0;1mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('decimal', '1.899999', '2008-09-07 23:56:03', 5, '10.5', '2008-09-07 23:56:03')[0m
+  [4;35;1mSQL (0.131677)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/deals/5
+Completed in 0.14565 (6 reqs/sec) | DB: 0.13495 (92%) | 302 Found [http://localhost/deals]
+
+
+Processing DealsController#show (for 127.0.0.1 at 2008-09-07 23:56:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiNEZWFsIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G%0AOgpAdXNlZHsGOwdU--5ee84e9884e38117d9adb465590cfdd7ebaacf07
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"deals"}
+  [4;36;1mDeal Columns (0.002120)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+  [4;35;1mDeal Load (0.000357)[0m   [0mSELECT * FROM `deals` WHERE (`deals`.`id` = 5) [0m
+Rendering template within layouts/deals
+Rendering deals/show
+Completed in 0.01340 (74 reqs/sec) | Rendering: 0.00372 (27%) | DB: 0.00248 (18%) | 200 OK [http://localhost/deals/5]
+
+
+Processing DealsController#index (for 127.0.0.1 at 2008-09-07 23:56:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"deals"}
+  [4;36;1mDeal Load (0.000296)[0m   [0;1mSELECT * FROM `deals` [0m
+Rendering template within layouts/deals
+Rendering deals/index
+  [4;35;1mDeal Columns (0.002727)[0m   [0mSHOW FIELDS FROM `deals`[0m
+Completed in 0.01655 (60 reqs/sec) | Rendering: 0.00813 (49%) | DB: 0.00302 (18%) | 200 OK [http://localhost/deals]
+  [4;36;1mSQL (0.000205)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000224)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDeals (1)
+  [4;35;1mSQL (0.002265)[0m   [0mDROP TABLE `deals`[0m
+  [4;36;1mSQL (0.000363)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000218)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000382)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000253)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDeals (1)
+  [4;35;1mSQL (0.075056)[0m   [0mCREATE TABLE `deals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `deal_name` varchar(255) DEFAULT NULL, `purchase_price` decimal(8,2) DEFAULT NULL, `current_price` decimal(8,0) DEFAULT NULL, `in_the_hole` decimal(8,2) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000379)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000239)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000393)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002454)[0m   [0mSHOW FIELDS FROM `deals`[0m
+  [4;36;1mSQL (0.001842)[0m   [0;1mdescribe `deals`[0m
+  [4;35;1mSQL (0.000491)[0m   [0mSHOW KEYS FROM `deals`[0m
+
+
+Processing ImportDealController#index (for 127.0.0.1 at 2008-09-07 23:56:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"import_deal"}
+Rendering import_deal/index
+Completed in 0.00387 (258 reqs/sec) | Rendering: 0.00150 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/import_deal]
+  [4;36;1mSQL (0.000204)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000224)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDeals (1)
+  [4;35;1mSQL (0.074997)[0m   [0mDROP TABLE `deals`[0m
+  [4;36;1mSQL (0.000371)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000245)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000392)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDeals (1)
+  [4;35;1mSQL (0.003696)[0m   [0mCREATE TABLE `deals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `deal_name` varchar(255) DEFAULT NULL, `purchase_price` decimal(8,2) DEFAULT NULL, `current_price` decimal(8,2) DEFAULT NULL, `in_the_hole` decimal(8,2) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000391)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000318)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000409)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003534)[0m   [0mSHOW FIELDS FROM `deals`[0m
+  [4;36;1mSQL (0.002845)[0m   [0;1mdescribe `deals`[0m
+  [4;35;1mSQL (0.000425)[0m   [0mSHOW KEYS FROM `deals`[0m
+
+
+Processing ImportDealController#csv_import (for 127.0.0.1 at 2008-09-07 23:57:16) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"csv_import"=>{"file"=>#<ActionController::UploadedStringIO:0x1718530>}, "commit"=>"Submit", "authenticity_token"=>"54aeb4558ba3d9a7afc79488def809a4dbeb6d6b", "action"=>"csv_import", "controller"=>"import_deal"}
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mDeal Columns (0.001908)[0m   [0mSHOW FIELDS FROM `deals`[0m
+  [4;36;1mDeal Create (0.000292)[0m   [0;1mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Could not pass up', '-500000.0', '2008-09-07 23:57:16', '500000.0', '1000000.0', '2008-09-07 23:57:16')[0m
+  [4;35;1mDeal Create (0.000207)[0m   [0mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Mom\'s Retirement', '-400000.0', '2008-09-07 23:57:16', '100000.0', '500000.0', '2008-09-07 23:57:16')[0m
+  [4;36;1mDeal Create (0.000183)[0m   [0;1mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('Last straw', '-175000.0', '2008-09-07 23:57:16', '75000.0', '250000.0', '2008-09-07 23:57:16')[0m
+  [4;35;1mDeal Create (0.000249)[0m   [0mINSERT INTO `deals` (`deal_name`, `in_the_hole`, `updated_at`, `current_price`, `purchase_price`, `created_at`) VALUES('McDonald\'s Revenge', '-1.0', '2008-09-07 23:57:16', '0.99', '1.99', '2008-09-07 23:57:16')[0m
+  [4;36;1mSQL (0.000743)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/import_deal
+Completed in 0.01796 (55 reqs/sec) | DB: 0.00372 (20%) | 302 Found [http://localhost/import_deal/csv_import]
+
+
+Processing ImportDealController#index (for 127.0.0.1 at 2008-09-07 23:57:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIiJTdWNjZXNzZnVsbHkgYWRkZWQgNCBEZWFsKHMpLgY6%0ACkB1c2VkewY7B1Q%3D--78e080a596fa14058458a4e975df6c7b7b8bf6af
+  Parameters: {"action"=>"index", "controller"=>"import_deal"}
+Rendering import_deal/index
+Completed in 0.00366 (273 reqs/sec) | Rendering: 0.00140 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/import_deal]
+
+
+Processing DealsController#index (for 127.0.0.1 at 2008-09-07 23:57:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMmFhMWE4ZWVmN2VjMGVjNmFjYTQ3MzE5MjQyZDc1%0ANmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--43c46860a14f79fb2f0a87723dfadf6f3188d164
+  Parameters: {"action"=>"index", "controller"=>"deals"}
+  [4;35;1mDeal Load (0.000340)[0m   [0mSELECT * FROM `deals` [0m
+Rendering template within layouts/deals
+Rendering deals/index
+  [4;36;1mDeal Columns (0.002023)[0m   [0;1mSHOW FIELDS FROM `deals`[0m
+Completed in 0.01297 (77 reqs/sec) | Rendering: 0.00469 (36%) | DB: 0.00236 (18%) | 200 OK [http://localhost/deals]

@@ -13,9 +13,9 @@ ActiveRecord::Schema.define(:version => 1) do
 
   create_table "deals", :force => true do |t|
     t.string   "deal_name"
-    t.integer  "purchase_price", :limit => 10, :precision => 10, :scale => 0
-    t.integer  "current_price",  :limit => 10, :precision => 10, :scale => 0
-    t.integer  "in_the_hole",    :limit => 10, :precision => 10, :scale => 0
+    t.decimal  "purchase_price", :precision => 8, :scale => 2
+    t.decimal  "current_price",  :precision => 8, :scale => 2
+    t.decimal  "in_the_hole",    :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
