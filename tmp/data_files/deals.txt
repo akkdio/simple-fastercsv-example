@@ -3,3 +3,4 @@ Could not pass up,1000000,500000,-500000
 Mom's Retirement,500000,100000,-400000
 Last straw,250000,75000,-175000
 McDonald's Revenge,1.99,.99,-1
+what was I thinking, 10000,  555, -1111
